@@ -174,7 +174,7 @@ gh_toc(){
                 echo "Found markers"
             else
                 echo "You don't have <!--ts--> or <!--te--> in your file...exiting"
-                exit 1
+                exit 0
             fi
             local ts="<\!--ts-->"
             local te="<\!--te-->"
