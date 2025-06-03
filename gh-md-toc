@@ -189,7 +189,7 @@ gh_toc(){
             # clear old TOC
             sed -i"${ext}" "/${ts}/,/${te}/{//!d;}" "$gh_src"
             # create toc file
-            echo "${toc}" > "${toc_path}"
+            echo -e "\n${toc}\n" > "${toc_path}"
             if [ "${no_footer}" != "yes" ]; then
                 echo -e "\n${toc_createdby}\n${toc_footer}\n" >> "$toc_path"
             fi
